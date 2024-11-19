@@ -1,0 +1,338 @@
+{
+	"info": {
+		"_postman_id": "0fbed83e-d575-4c0e-990c-ac128ff56432",
+		"name": "alis-auth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10125381"
+	},
+	"item": [
+		{
+			"name": "{{url}}/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "accept-language",
+						"value": "tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7"
+					},
+					{
+						"key": "cache-control",
+						"value": "no-cache"
+					},
+					{
+						"key": "content-security-policy",
+						"value": "upgrade-insecure-requests"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "origin",
+						"value": "http://r.kayiranterapi.com"
+					},
+					{
+						"key": "pragma",
+						"value": "no-cache"
+					},
+					{
+						"key": "priority",
+						"value": "u=1, i"
+					},
+					{
+						"key": "referer",
+						"value": "http://r.kayiranterapi.com/"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Chromium\";v=\"130\", \"Google Chrome\";v=\"130\", \"Not?A_Brand\";v=\"99\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "cross-site"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"burkay\",\r\n    \"password\": \"erdem123.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/auth/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"auth",
+						"login"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "rick",
+							"disabled": true
+						},
+						{
+							"key": "status",
+							"value": "dead",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}/auth/refresh-token",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "accept-language",
+						"value": "tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7"
+					},
+					{
+						"key": "cache-control",
+						"value": "no-cache"
+					},
+					{
+						"key": "content-security-policy",
+						"value": "upgrade-insecure-requests"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "origin",
+						"value": "http://r.kayiranterapi.com"
+					},
+					{
+						"key": "pragma",
+						"value": "no-cache"
+					},
+					{
+						"key": "priority",
+						"value": "u=1, i"
+					},
+					{
+						"key": "referer",
+						"value": "http://r.kayiranterapi.com/"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Chromium\";v=\"130\", \"Google Chrome\";v=\"130\", \"Not?A_Brand\";v=\"99\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "cross-site"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpcCI6IjEyNy4wLjAuMSIsImlhdCI6MTczMjAyMTc0NiwiZXhwIjoxNzMyNjI2NTQ2fQ.vCHOcgjdNFXf0bHRKMmzMKQkF6ao_Qi-w1qVhJ--sG4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/auth/refresh-token",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"auth",
+						"refresh-token"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "rick",
+							"disabled": true
+						},
+						{
+							"key": "status",
+							"value": "dead",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}/users/profile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJ1cmtheSIsInBhc3N3b3JkIjoiZXJkZW0xMjMuIiwiaXAiOiIxMjcuMC4wLjEiLCJpYXQiOjE3MzIwMjE3NDYsImV4cCI6MTczMjAyMjY0Nn0.-7D47RwfglkYw5U7iKJEKqrYU-qB8-6wGsiVTsdoOwU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "accept-language",
+						"value": "tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7"
+					},
+					{
+						"key": "cache-control",
+						"value": "no-cache"
+					},
+					{
+						"key": "content-security-policy",
+						"value": "upgrade-insecure-requests"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "origin",
+						"value": "http://r.kayiranterapi.com"
+					},
+					{
+						"key": "pragma",
+						"value": "no-cache"
+					},
+					{
+						"key": "priority",
+						"value": "u=1, i"
+					},
+					{
+						"key": "referer",
+						"value": "http://r.kayiranterapi.com/"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Chromium\";v=\"130\", \"Google Chrome\";v=\"130\", \"Not?A_Brand\";v=\"99\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "cross-site"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpcCI6Ijo6MSIsImlhdCI6MTczMjAyMDk2NCwiZXhwIjoxNzMyNjI1NzY0fQ.ZKcDqYZWFMnb3VsZZqO6rWbq9E8wg41zFAsS8HwVTyw\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/users/profile",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"profile"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "rick",
+							"disabled": true
+						},
+						{
+							"key": "status",
+							"value": "dead",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
